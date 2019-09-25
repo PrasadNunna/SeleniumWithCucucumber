@@ -60,8 +60,6 @@ public class LoginStep extends BaseUtil{
         for (User user: users){
             page.Login(user.username, user.password);
         }
-
-        page.Login(users.get(2).toString(), users.get(3).toString());
     }
 
     @And("^I enter ([^\"]*) and ([^\"]*)$")
