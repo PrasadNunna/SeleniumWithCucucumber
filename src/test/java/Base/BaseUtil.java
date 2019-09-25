@@ -18,6 +18,6 @@ public class BaseUtil {
 
     public static ExtentTest features;
 
-    public static String reportLocation = "C:\Eclipse\Report";
+    public static String reportLocation = "C:/Eclipse/Report";
 
 }
