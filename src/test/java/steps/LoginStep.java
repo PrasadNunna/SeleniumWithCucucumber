@@ -2,17 +2,20 @@ package steps;
 
 import Base.BaseUtil;
 import com.aventstack.extentreports.GherkinKeyword;
-
-import io.cucumber.datatable.DataTable;
-import io.cucumber.java.en.And;
-import io.cucumber.java.en.Given;
-import io.cucumber.java.en.Then;
+import cucumber.api.DataTable;
+import cucumber.api.PendingException;
+import cucumber.api.java.en.And;
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import pages.LoginPage;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
- * Created by Karthik on 21/09/2019.
+ * Created by Karthik on 31/01/2019.
  */
 public class LoginStep extends BaseUtil{
 
@@ -47,7 +50,7 @@ public class LoginStep extends BaseUtil{
     }
 
 
-  @And("^I enter the following for Login$")
+    @And("^I enter the following for Login$")
     public void iEnterTheFollowingForLogin(DataTable table) throws Throwable {
         scenarioDef.createNode(new GherkinKeyword("And"), "I entere the following for login");
         //Create an ArrayList
@@ -72,7 +75,7 @@ public class LoginStep extends BaseUtil{
     @Then("^I should see the userform page wrongly$")
     public void iShouldSeeTheUserformPageWrongly() throws Throwable {
         scenarioDef.createNode(new GherkinKeyword("Then"), "I should see  the useform page wrongly");
-        //Assert.assertEquals("Its not displayed", base.Driver.findElement(By.id("sdfgdsfsd")).isDisplayed(), true);
+        Assert.assertEquals("Its not displayed", base.Driver.findElement(By.id("sdfgdsfsd")).isDisplayed(), true);
     }
 
 
